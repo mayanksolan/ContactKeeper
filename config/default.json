@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://devMays:devColdplay@cluster0-n0rgm.mongodb.net/contactkeeper?retryWrites=true"
+  "mongoURI": "mongodb+srv://devMays:devColdplay@cluster0-n0rgm.mongodb.net/contactkeeper?retryWrites=true",
+  "jwtSecret": "secret"
 }
