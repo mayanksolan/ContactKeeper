@@ -1,4 +1,4 @@
-import React, { useReducer } from "React";
+import React, { useReducer } from "react";
 import uuid from "uuid";
 import ContactContext from "./contactContext";
 import contactReducer from "./contactReducer";
@@ -14,6 +14,55 @@ import {
 
 const ContactState = props => {
   const initialState = {
-    contacts: []
+    contacts: [
+      {
+        id: 1,
+        name: "Sakshi Vig",
+        email: "sakshi@gmail.com",
+        phone: "111-111-1111",
+        type: "personal"
+      },
+      {
+        id: 2,
+        name: "Ashok Solan",
+        email: "ashok@gmail.com",
+        phone: "222-222-2222",
+        type: "professional"
+      },
+      {
+        id: 1,
+        name: "Meenu Solan",
+        email: "meenu@gmail.com",
+        phone: "333-333-3333",
+        type: "personal"
+      }
+    ]
   };
+  const [state, dispatch] = useReducer(contactReducer, initialState);
+
+  //Add contact
+
+  //Delete contact
+
+  //Set Current contact
+
+  //Clear current contact
+
+  //Update contact
+
+  //filter contacts
+
+  //clear filter
+
+  return (
+    <ContactContext.Provider
+      value={{
+        contacts: state.contacts
+      }}
+    >
+      {props.children}
+    </ContactContext.Provider>
+  );
 };
+
+export default ContactState;
